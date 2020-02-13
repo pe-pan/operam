@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Register a phone number</title>
+    <script defer src="register_phone.dart.js"></script>
+    <link href="logo.png" rel="shortcut icon"/>
+</head>
+
+<body>
+<h4>I would like to</h4>
+<form action="http://localhost:4041/register_phone" method="POST">
+    <select name="id">
+        <option value="e">Send an e-mail</option>
+        <option value="t">Tweet a status</option>
+    </select>
+    <h4>Provide your phone number (for authentication purposes)</h4>
+    <p>
+        <input name="phone" placeholder="+420 XXX XXX XXX" required/>
+        <span id="validation"></span>
+    </p>
+    <input type="submit" value="Verify phone number!">
+    <p>
+        <span id="normalized"></span>
+    </p>
+</form>
+</body>
+
+</html>
