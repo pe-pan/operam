@@ -22,7 +22,7 @@ Future main(List<String> secretsFile) async {
   }
   iLog.i('Server initialization...');
 
-  _secrets = Secrets(secretsFile[0]);
+  _secrets = Secrets(secretsFile[0], true);
 
   final dbProps = _secrets.getCategory('db');
   await db.connect(
