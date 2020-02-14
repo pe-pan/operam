@@ -229,7 +229,7 @@ dynamic tweet(String message) async {
 }
 
 const tokenCharacters =
-    '23456789abcdefghijkmnopqrstuvwxyzABCDEFGHIJKLMNPRSTUVWXYZ'; //do not use 0, 1, l, O and Q (might be confusing)
+    '23456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPRSTUVWXYZ'; //do not use 0, 1, l, I, O and Q (might be confusing)
 final random = Random();
 
 String getToken() {
