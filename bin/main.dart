@@ -28,7 +28,12 @@ Future main(List<String> secretsFile) async {
   await db.connect(
       dbProps['username'], dbProps['username'], dbProps['password']);
 
-//  await db.create_db();
+  try {
+    await db.create_db();
+  } catch (e) {
+    iLog.e("Exception", e);  //db might have been created; continue
+    iLog.i("DB exists; just continue");
+  }
 
   final server = await HttpServer.bind(
     InternetAddress.anyIPv4,

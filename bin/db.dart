@@ -16,7 +16,7 @@ Future<dynamic> connect(String db, String username, password) async {
 void create_db() async {  //not used; table created during build time / startup
   iLog.i('Creating DB table...');
   await opened;
-  connection.query('''
+  await connection.query('''
   CREATE TABLE $tableName(
       token VARCHAR(20) PRIMARY KEY,
       operation VARCHAR (1) NOT NULL);
