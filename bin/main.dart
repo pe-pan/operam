@@ -31,7 +31,7 @@ Future main(List<String> secretsFile) async {
 //  await db.create_db();
 
   final server = await HttpServer.bind(
-    InternetAddress.loopbackIPv4,
+    InternetAddress.anyIPv4,
     4041,
   );
   await for (final request in server) {
